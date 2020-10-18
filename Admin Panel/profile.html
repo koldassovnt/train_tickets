@@ -1,0 +1,307 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    	<!-- Import lib -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- End import lib -->
+    <style>
+
+
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background: #F1F3FA;
+}
+body { 
+  overflow-x:hidden;
+}
+#mainNav {
+  background-color: darkslategrey;
+  color:white;
+}
+#mainNav .navbar-brand {
+  color: #fed136;
+  font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+}
+
+
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+
+
+footer {
+  text-align: center;
+  background-color: white;
+}
+.ft{
+  padding-left:22px;
+  padding-right:31px;
+}
+
+footer span.copyright {
+  font-size: 90%;
+  line-height: 40px;
+  text-transform: none;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:blak;
+}
+
+footer ul.quicklinks {
+  font-size: 90%;
+  line-height: 40px;
+  margin-bottom: 0;
+  text-transform: none;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+  font-size: 20px;
+  line-height: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+  border-radius: 100%;
+  outline: none;
+  background-color: #212529;
+}
+
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+  background-color: #fed136;
+}
+.content{
+   margin-top:60px;
+ }
+
+
+/* Profile container */
+.profile {
+  margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fff;
+}
+
+.profile-userpic img {
+  float: none;
+  display:block;
+    margin:auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+    
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
+}
+
+.nav>li {
+    position: relative;
+    display: block;
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">User Profile</a>
+      <div>
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item" style="padding-right: 20px;">
+                <a href = "index.html"  class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-sign-out"></i> Admin Panel</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-sign-out"></i> Log out</a>
+      </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--our content goes here-->
+  <div class="container content">
+      <div class="row profile">
+        <div class="col-md-3">
+          <div class="profile-sidebar position-fixed">
+            <!-- SIDEBAR USERPIC -->
+            <div class="profile-userpic">
+              <img src="https://i.pinimg.com/originals/52/74/0f/52740f7a75720a4576d1bd0613e3a3a1.jpg" class="img-responsive" alt="" style="width: 256px;height: 256px;;">
+            </div>
+            <!-- END SIDEBAR USERPIC -->
+            <!-- SIDEBAR USER TITLE -->
+            <div class="profile-usertitle">
+              <div class="profile-usertitle-name">
+                Ayan Naimankhan
+              </div>
+              <div class="profile-usertitle-job">
+                Developer
+              </div>
+            </div>
+            <!-- END SIDEBAR USER TITLE -->
+            <!-- SIDEBAR MENU -->
+            <div class="profile-usermenu sidebar-sticky">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="profile-settings.html">
+                              <i class="fa fa-user"></i>
+                              Account Settings </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link active" href="profile.html" target="_blank">
+                              <i class="fa fa-check"></i>
+                              Tasks </a>
+                </li>
+              </ul>
+            </div>
+            <!-- END MENU -->
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="profile-content">
+         <h2>Tasks : </h2>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-9 ft">
+  <footer class="footer">
+    <div class="row">
+      <div class="col-md-4">
+        <span class="copyright">Copyright &copy; Express Train</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Terms of Use</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  </div>
+    </div>
+  </div>
+</body>
+</html>
