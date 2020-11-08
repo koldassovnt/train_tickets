@@ -16,7 +16,7 @@ class CreateRailcarSpotsTable extends Migration
         Schema::create('railcar_spots', function (Blueprint $table) {
             $table->increments('railcar_spot_id');
             $table->integer('railcar_id')->unsigned();
-            $table->integer('spot_id');
+            $table->integer('spot_id')->unsigned();
             $table->timestamps();
             $table->foreign('railcar_id')->references('railcar_id')->on('railcars')->onDelete('cascade');
             $table->foreign('spot_id')->references('spot_id')->on('spots')->onDelete('cascade');
