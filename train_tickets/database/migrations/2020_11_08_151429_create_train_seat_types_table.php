@@ -14,8 +14,12 @@ class CreateTrainSeatTypesTable extends Migration
     public function up()
     {
         Schema::create('train_seat_types', function (Blueprint $table) {
-            $table->id();
+            $table->increments('train_seat_type_id');
+            $table->integer('train_id')->unsigned();
+            $table->integer('seat_type_id')->unsigned();
             $table->timestamps();
+            $table->foreign('train_id')->references('train_id')->on('trains')->onDelete('cascade');
+            $table->foreign('seat_type_id')->references('seat_type_id')->on('seat_types')->onDelete('cascade');
         });
     }
 

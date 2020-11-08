@@ -14,7 +14,8 @@ class CreateRailcarsTable extends Migration
     public function up()
     {
         Schema::create('railcars', function (Blueprint $table) {
-            $table->id();
+            $table->increments('railcar_id');
+            $table->integer('railcar_number');
             $table->timestamps();
         });
     }

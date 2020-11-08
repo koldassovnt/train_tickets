@@ -14,8 +14,15 @@ class CreateTicketsTable extends Migration
     public function up()
     {
         Schema::create('tickets', function (Blueprint $table) {
-            $table->id();
+            $table->increments('ticket_id');
+            $table->integer('from_city_id')->unsigned();
+            $table->integer('to_city_id')->unsigned();
+            $table->integer('price');
+            $table->integer('train_id')->unsigned();
             $table->timestamps();
+            $table->foreign('from_city_id')->references('city_id')->on('cities')->onDelete('cascade');
+            $table->foreign('to_city_id')->references('city_id')->on('cities')->onDelete('cascade');
+            $table->foreign('train_id')->references('train_id')->on('trains')->onDelete('cascade');
         });
     }
 

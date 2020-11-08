@@ -14,8 +14,12 @@ class CreateUserTicketsTable extends Migration
     public function up()
     {
         Schema::create('user_tickets', function (Blueprint $table) {
-            $table->id();
+            $table->increments('user_tickets_id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('ticket_id')->unsigned();
             $table->timestamps();
+            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
+            $table->foreign('ticket_id')->references('ticket_id')->on('tickets')->onDelete('cascade');
         });
     }
 

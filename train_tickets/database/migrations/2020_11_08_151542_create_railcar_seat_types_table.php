@@ -14,8 +14,13 @@ class CreateRailcarSeatTypesTable extends Migration
     public function up()
     {
         Schema::create('railcar_seat_types', function (Blueprint $table) {
-            $table->id();
+            $table->increments('railcar_seat_type_id');
+            $table->integer('railcar_id');
+            $table->integer('seat_type_id');
             $table->timestamps();
+            $table->foreign('railcar_id')->references('railcar_id')->on('railcars')->onDelete('cascade');
+            $table->foreign('seat_type_id')->references('seat_type_id')->on('seat_types')->onDelete('cascade');
+
         });
     }
 
