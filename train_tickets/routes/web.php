@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\TrainController;
+use App\Http\Controllers\TicketController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,4 +25,16 @@ Route::get('/contacts', [HomeController::class, 'contacts']);
 
 Route::resources([
     'admin' => AdminController::class,
+]);
+
+Route::resources([
+    'admin-cities' => CityController::class,
+]);
+
+Route::resources([
+    'admin-trains' => TrainController::class,
+]);
+
+Route::resources([
+    'admin-tickets' => TicketController::class,
 ]);
