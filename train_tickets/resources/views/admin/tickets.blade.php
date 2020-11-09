@@ -11,10 +11,10 @@ Admin Panel
 	<div class="wrapper" style="margin-top: 20px; ">
 		<div class="row">
 			<div style = "padding: 30px;">
-			<h1>Available Trips</h1>
+			<h1>Available Tickets</h1>
 		</div>
 			<div style="padding: 30px;">
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTask">+ ADD a Trip</button>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTask">+ ADD a Ticket</button>
 
 
 
@@ -28,7 +28,7 @@ Admin Panel
   
 		<!-- Modal Header -->
 		<div class="modal-header">
-		  <h4 class="modal-title">Adding a Trip </h4>
+		  <h4 class="modal-title">Adding a Ticket </h4>
 		  <button type="button" class="close" data-dismiss="modal">&times;</button>
 		</div>
   
@@ -93,6 +93,15 @@ Admin Panel
       </label>
       <input class="form-control" id="price" name="price" type="text"/>
      </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="price">
+       Train :
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="train" name="train" type="text"/>
+     </div>
      <div class="form-group">
       <div>
        <button class="btn btn-primary " name="submit" type="submit">
@@ -128,7 +137,7 @@ Admin Panel
 				<div class="card">
 					<div class="card-header">
 						<h3>
-							All available Trips
+							All available Tickets
 						</h3>
 						<i class="fas fa-ellipsis-h"></i>
 					</div>
