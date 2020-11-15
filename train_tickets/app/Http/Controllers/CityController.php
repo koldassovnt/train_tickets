@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\City;
+use DB;  
 
 class CityController extends Controller
 {
@@ -14,7 +16,8 @@ class CityController extends Controller
      */
     public function index()
     {
-        return view('admin.cities');
+        $cities = City::all();
+        return view('admin.cities')->with('cities', $cities);
     }
 
     /**
@@ -35,7 +38,19 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'name'=>'required',
+            'code'=>'required',
+        ]);
+
+        $city = new City([
+            'city_name' => $request->get('name'),
+            'city_code' => $request->get('code')
+        ]);
+
+        $city->save();
+        return redirect('/admin-cities')->with('success', 'City saved!');
     }
 
     /**
