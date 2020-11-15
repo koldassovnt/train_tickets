@@ -113,6 +113,7 @@ Admin Panel
 								<td>{{$c->city_id}}</td>
 								<td>{{$c->city_name}}</td>
 								<td>{{$c->city_code}}</td>
+
 								<td>
 									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTask<?echo $c->city_id?>" ><i class="bg-success"></i>Edit</button>
 
@@ -182,9 +183,15 @@ Admin Panel
 
 
 									<button type="button" class="btn btn-danger"><i class="bg-danger"></i>Delete</button>
+								<td style="display: flex;">
+									<button type="button" class="btn btn-primary"><i class="bg-success"></i>Edit</button>
+									<form style="margin-left: 8px;" action="{{ route('admin-cities.destroy', $c->city_id)}}" method="POST">
+										@method('DELETE')
+										@csrf
+										<button type="submit" class="btn btn-danger">Delete</button>
+									</form>
 								</td>
 								@endforeach
-								
 							</tbody>
 						</table>
 					</div>
