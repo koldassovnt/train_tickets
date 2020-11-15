@@ -113,78 +113,71 @@ Admin Panel
 								<td>{{$c->city_id}}</td>
 								<td>{{$c->city_name}}</td>
 								<td>{{$c->city_code}}</td>
-
-								<td>
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTask<?echo $c->city_id?>" ><i class="bg-success"></i>Edit</button>
-
-
-			<!-- The Modal -->
-<div class="modal fade" id="editTask<?echo $c->city_id?>"  >
-	<div class="modal-dialog modal-xl" >
-	  <div class="modal-content "style="width: 1000px;" >
-  
-		<!-- Modal Header -->
-		<div class="modal-header">
-		  <h4 class="modal-title">Edit City </h4>
-		  <button type="button" class="close" data-dismiss="modal">&times;</button>
-		</div>
-  
-		<!-- Modal body -->
-		<div class="modal-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<form method="POST" action="{{ route('admin-cities.store') }}">
-							@csrf
-							<div class="form-group ">
-								<label class="control-label requiredField" for="name">
-									 City name
-									<span class="asteriskField">
-										*
-									</span>
-								</label>
-								<div class="input-group">
-					 				<input class="form-control" id="name" name="name" value ="<?php echo $c->city_name ?>" type="text"/>
-								</div> 
-							   </div>
-							   
-							   <div class="form-group ">
-								<label class="control-label requiredField" for="code">
-									City Code
-									<span class="asteriskField">
-										*
-									</span>
-								</label>
-								<div class="input-group">
-								 	<input class="form-control" id="code" name="code" value ="<?php echo $c->city_code ?>" type="text"/>
-								</div>
-							   </div>
-							   <div class="form-group">
-									<button class="btn btn-primary " name="submit" type="submit">
-									Submit
-									</button>
-								</div>
-						</form>
-				 	</div>
-				</div>
-			</div>
-		</div>
-  
-		<!-- Modal footer -->
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-		</div>
-  
-	  </div>
-	</div>
-
-
-
-
-
-									<button type="button" class="btn btn-danger"><i class="bg-danger"></i>Delete</button>
 								<td style="display: flex;">
-									<button type="button" class="btn btn-primary"><i class="bg-success"></i>Edit</button>
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTask<?php echo $c->city_id?>" ><i class="bg-success"></i>Edit</button>
+
+									<!-- The Modal -->
+								<div class="modal fade" id="editTask<?php echo $c->city_id?>"  >
+									<div class="modal-dialog modal-xl" >
+									<div class="modal-content "style="width: 1000px;" >
+									
+									<!-- Modal Header -->
+									<div class="modal-header">
+									<h4 class="modal-title">Edit City </h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									</div>
+									
+									<!-- Modal body -->
+									<div class="modal-body">
+									<div class="container-fluid">
+									<div class="row">
+										<div class="col-md-6 col-sm-6 col-xs-12">
+										<form method="POST" action="{{ route('admin-cities.update', $c->city_id)}}">
+											@method('PATCH') 
+											@csrf
+										<div class="form-group ">
+										<label class="control-label requiredField" for="name">
+											City name
+											<span class="asteriskField">
+											*
+											</span>
+										</label>
+										<div class="input-group">
+											<input class="form-control" id="name" name="name" value ="<?php echo $c->city_name ?>" type="text"/>
+										</div> 
+											</div>
+											
+										<div class="form-group ">
+										<label class="control-label requiredField" for="code">
+											City Code
+											<span class="asteriskField">
+											*
+											</span>
+										</label>
+										<div class="input-group">
+											<input class="form-control" id="code" name="code" value ="<?php echo $c->city_code ?>" type="text"/>
+										</div>
+											</div>
+											<div class="form-group">
+												<button class="btn btn-primary " name="submit" type="submit">
+													Update
+												</button>
+											</div>
+										</form>
+										</div>
+									</div>
+									</div>
+									</div>
+									
+									<!-- Modal footer -->
+									<div class="modal-footer">
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									</div>
+									
+									</div>
+									</div>
+								</div>
+
 									<form style="margin-left: 8px;" action="{{ route('admin-cities.destroy', $c->city_id)}}" method="POST">
 										@method('DELETE')
 										@csrf

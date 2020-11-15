@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Train;
 
 class TrainController extends Controller
 {
@@ -14,7 +15,8 @@ class TrainController extends Controller
      */
     public function index()
     {
-        return view('admin.trains');
+        $trains = Train::all();
+        return view('admin.trains')->with('trains', $trains);
     }
 
     /**
@@ -35,7 +37,17 @@ class TrainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+        ]);
+
+        $train = new Train([
+            'train_name' => $request->get('name'),
+
+        ]);
+
+        $train->save();
+        return redirect('/admin-trains')->with('success', 'Train saved!');
     }
 
     /**

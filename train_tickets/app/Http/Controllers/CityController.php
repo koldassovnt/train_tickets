@@ -79,12 +79,21 @@ class CityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $city_id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'code'=>'required',
+        ]);
+
+        $city = City::find($id);
+        $city->city_name =  $request->get('name');
+        $city->city_code =  $request->get('code');
+        $city->save();
+        return redirect('/admin-cities')->with('success', 'City updated!');
     }
 
     /**

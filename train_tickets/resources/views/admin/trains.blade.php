@@ -35,34 +35,29 @@ Admin Panel
 		<div class="modal-body">
 			<div class="container-fluid">
 				<div class="row">
-				 <div class="col-md-6 col-sm-6 col-xs-12">
-				  <form method="post">
-				   <div class="form-group ">
-					<label class="control-label requiredField" for="name">
-					 Train
-					 <span class="asteriskField">
-					  *
-					 </span>
-					</label>
-					<div class="input-group">
-					 <div class="input-group-addon">
-					  <i class="fa fa-tasks">
-					  </i>
-					 </div>
-					 <input class="form-control" id="name" name="name" type="text"/>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<form method="POST" action="{{ route('admin-trains.store') }}">
+							@csrf
+							<div class="form-group ">
+								<label class="control-label requiredField" for="name">
+									 Train name
+									<span class="asteriskField">
+										*
+									</span>
+								</label>
+								<div class="input-group">
+					 				<input class="form-control" id="name" name="name" type="text"/>
+								</div> 
+							   </div>
+							   <div class="form-group">
+									<button class="btn btn-primary " name="submit" type="submit">
+									Submit
+									</button>
+								</div>
+						</form>
 					</div>
-				   </div>
-				   <div class="form-group">
-					<div>
-					 <button class="btn btn-primary " name="submit" type="submit">
-					  Submit
-					 </button>
-					</div>
-				   </div>
-				  </form>
-				 </div>
 				</div>
-			   </div>
+			</div>
 		</div>
   
 		<!-- Modal footer -->
@@ -100,40 +95,17 @@ Admin Panel
 								</tr>
 							</thead>
 							<tbody>
+								@foreach ($trains as $t)
 								<tr>
-									<td>1</td>
-									<td>High Speed Train</td>
+									<td>{{$t->train_id}}</td>
+									<td>{{$t->train_name}}</td>
 									<td>
-										
-										
-										<button type="button" class="btn btn-primary"><i class="bg-success"></i>Edit</button>
-							<button type="button" class="btn btn-danger"><i class="bg-danger"></i>Delete</button>
-								
-								</td>
-							</div>
-									
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Light Train</td>
-									<td>
-										
-										
 										<button type="button" class="btn btn-primary"><i class="bg-success"></i>Edit</button>
 										<button type="button" class="btn btn-danger"><i class="bg-danger"></i>Delete</button>
-								</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Electric Train </td>
-									<td>
-										
-										
-										<button type="button" class="btn btn-primary"><i class="bg-success"></i>Edit</button>
-										<button type="button" class="btn btn-danger"><i class="bg-danger"></i>Delete</button>
-								</td>
-								</tr>
 								
+									</td>
+								</tr>
+								@endforeach
 							</tbody>
 						</table>
 					</div>
