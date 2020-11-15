@@ -100,8 +100,27 @@ Admin Panel
         *
        </span>
       </label>
-      <input class="form-control" id="train" name="train" type="text"/>
+	  <select class="select form-control" id="train" name="train">
+       <option value="Турксиб Астана">
+	   Турксиб Астана
+       </option>
+      </select>
      </div>
+	 <div class="form-group">
+	 <label class="control-label requiredField" for="price">
+       Departure Time :
+	 <input type="time" name= "timeDeparture">
+	 </div>
+	 <div class="form-group">
+	 <label class="control-label requiredField" for="price">
+       Arrival Time :
+	 <input type="time" name= "timeArrival">
+	 </div>
+	 <div class="form-group">
+	 <label class="control-label requiredField" for="price">
+       Trip Duration :
+	 <input type="time" name= "Duration">
+	 </div>
      <div class="form-group">
       <div>
        <button class="btn btn-primary " name="submit" type="submit">

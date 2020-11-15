@@ -39,17 +39,24 @@ Admin Panel
 				  <form method="post">
 				   <div class="form-group ">
 					<label class="control-label requiredField" for="name">
-					 City
+					 City name
 					 <span class="asteriskField">
 					  *
 					 </span>
 					</label>
 					<div class="input-group">
-					 <div class="input-group-addon">
-					  <i class="fa fa-tasks">
-					  </i>
-					 </div>
 					 <input class="form-control" id="name" name="name" type="text"/>
+					</div>
+				   </div>
+				   <div class="form-group ">
+					<label class="control-label requiredField" for="name">
+					 City Code
+					 <span class="asteriskField">
+					  *
+					 </span>
+					</label>
+					<div class="input-group">
+					 <input class="form-control" id="name" name="code" type="text"/>
 					</div>
 				   </div>
 				   <div class="form-group">
