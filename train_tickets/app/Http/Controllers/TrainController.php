@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Train;
+use DB;  
+
 
 class TrainController extends Controller
 {
@@ -81,7 +83,15 @@ class TrainController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+        ]);
+
+        $train = Train::find($id);
+        $train->train_name =  $request->get('name');
+
+        $train->save();
+        return redirect('/admin-trains')->with('success', 'Train updated!');
     }
 
     /**
@@ -92,6 +102,8 @@ class TrainController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $train = DB::table('trains')->where('train_id',$id)->delete();
+
+        return redirect('/admin-trains');
     }
 }

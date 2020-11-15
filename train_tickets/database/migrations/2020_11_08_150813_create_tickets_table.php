@@ -22,6 +22,7 @@ class CreateTicketsTable extends Migration
             $table->timestamps();
             $table->string('departure_time');
             $table->string('arrival_time');
+            $table->string('path_time');
             $table->foreign('from_city_id')->references('city_id')->on('cities')->onDelete('cascade');
             $table->foreign('to_city_id')->references('city_id')->on('cities')->onDelete('cascade');
             $table->foreign('train_id')->references('train_id')->on('trains')->onDelete('cascade');
