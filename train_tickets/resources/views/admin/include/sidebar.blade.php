@@ -16,7 +16,7 @@
 					<div>
 						<i class="fas fa-ticket-alt"></i>
 					</div>
-					<span>Trips</span>
+					<span>Tickets</span>
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
