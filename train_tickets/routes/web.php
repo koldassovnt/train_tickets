@@ -25,6 +25,8 @@ Route::get('/about', [HomeController::class, 'about']);
 
 Route::get('/contacts', [HomeController::class, 'contacts']);
 
+Route::get('/logout', [LoginController::class, 'destroy']);
+
 Route::resources([
     'login' => LoginController::class,
 ]);

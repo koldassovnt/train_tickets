@@ -6,6 +6,12 @@ Sign Up
 @include('include.header')
 @section('content')
 
+@if(session()->has('jsAlert'))
+    <script>
+        alert({{ session()->get('jsAlert') }});
+    </script>
+@endif 
+
 <div class="main">
 
 <!-- Sign up form -->
@@ -15,6 +21,7 @@ Sign Up
             <div class="signup-form">
                 <h2 class="form-title">Sign up</h2>
                 <form method="POST" action="{{ route('register.store') }}" class="register-form" id="register-form">
+                    @csrf
                     <div class="form-group">
                         <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                         <input type="text" name="name" id="name" placeholder="Your Name"/>
@@ -28,8 +35,9 @@ Sign Up
                         <input type="password" name="pass" id="pass" placeholder="Password"/>
                     </div>
                     <div class="form-group">
-                        <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                        <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                        <label for="password_confirmation">Password Confirmation:</label>
+                        <input type="password" class="form-control" id="password_confirmation"
+                               name="password_confirmation">
                     </div>
                     <div class="form-group">
                         <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
@@ -38,6 +46,8 @@ Sign Up
                     <div class="form-group form-button">
                         <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
                     </div>
+                    <br><br>
+                    {{-- @include('partials.formerrors') --}}
                 </form>
             </div>
             <div class="signup-image">
@@ -51,5 +61,5 @@ Sign Up
 </div>
 
 
-    @endsection
+@endsection
 
