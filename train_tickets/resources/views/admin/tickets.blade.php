@@ -42,97 +42,99 @@ Admin Panel
 
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
 <div class="bootstrap-iso">
- <div class="container-fluid">
-  <div class="row">
-   <div class="col-md-6 col-sm-6 col-xs-12">
-    <form method="post">
-     <div class="form-group ">
-      <label class="control-label requiredField" for="from_city">
-       From City
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-      <select class="select form-control" id="from_city" name="from_city">
-       <option value="Almaty">
-        Almaty
-       </option>
-       <option value="London">
-        London
-       </option>
-       <option value="Taldykorgan">
-        Taldykorgan
-       </option>
-      </select>
-     </div>
-     <div class="form-group ">
-      <label class="control-label requiredField" for="to_city">
-       To City:
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-      <select class="select form-control" id="to_city" name="to_city">
-       <option value="Almaty">
-        Almaty
-       </option>
-       <option value="London">
-        London
-       </option>
-       <option value="Taldykorgan">
-        Taldykorgan
-       </option>
-      </select>
-     </div>
-     <div class="form-group ">
-      <label class="control-label requiredField" for="price">
-       Price :
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-      <input class="form-control" id="price" name="price" type="text"/>
-     </div>
-     <div class="form-group ">
-      <label class="control-label requiredField" for="price">
-       Train :
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-	  <select class="select form-control" id="train" name="train">
-       <option value="Турксиб Астана">
-	   Турксиб Астана
-       </option>
-      </select>
-     </div>
-	 <div class="form-group">
-	 <label class="control-label requiredField" for="price">
-       Departure Time :
-	 <input type="time" name= "timeDeparture">
-	 </div>
-	 <div class="form-group">
-	 <label class="control-label requiredField" for="price">
-       Arrival Time :
-	 <input type="time" name= "timeArrival">
-	 </div>
-	 <div class="form-group">
-	 <label class="control-label requiredField" for="price">
-       Trip Duration :
-	 <input type="time" name= "Duration">
-	 </div>
-     <div class="form-group">
-      <div>
-       <button class="btn btn-primary " name="submit" type="submit">
-        Submit
-       </button>
-      </div>
-     </div>
-    </form>
+ 	<div class="container-fluid">
+  		<div class="row">
+   			<div class="col-md-6 col-sm-6 col-xs-12">
+				<form method="POST" action="{{ route('admin-tickets.store') }}">
+					@csrf
+					<div class="form-group ">
+						<label class="control-label requiredField" for="from_city">
+						 From City
+							<span class="asteriskField">
+							*
+							</span>
+						</label>
+						<select class="select form-control" id="from_city" name="from_city_id">
+							@foreach ($cities as $c)
+							<option value="{{$c->city_id}}">
+								{{$c->city_name}}
+								</option>
+							@endforeach
+						</select>
+					   </div>
+
+					   <div class="form-group ">
+						<label class="control-label requiredField" for="to_city">
+						 To City:
+							<span class="asteriskField">
+							*
+							</span>
+						</label>
+						<select class="select form-control" id="to_city" name="to_city_id">
+							@foreach ($cities as $c)
+							<option value="{{$c->city_id}}">
+								{{$c->city_name}}
+								</option>
+							@endforeach
+						</select>
+					   </div>
+
+					   <div class="form-group ">
+						<label class="control-label requiredField" for="price">
+						 Price :
+							<span class="asteriskField">
+							*
+							</span>
+						</label>
+						<input class="form-control" id="price" name="price" type="number"/>
+					   </div>
+
+					   <div class="form-group ">
+						<label class="control-label requiredField" for="train">
+						 Train :
+							<span class="asteriskField">
+							*
+							</span>
+						</label>
+						<select class="select form-control" id="train" name="train_id">
+							@foreach ($trains as $t)
+							<option value="{{$t->train_id}}">
+								{{$t->train_name}}
+							</option>
+							@endforeach
+						</select>
+					   </div>
+
+					   <div class="form-group">
+							<label class="control-label requiredField" for="departure">
+							Departure Time :
+							<input type="time" name= "departure_time" id="departure">
+						</div>
+
+						<div class="form-group">
+							<label class="control-label requiredField" for="arrival">
+							  Arrival Time :
+							<input type="time" name= "arrival_time" id="arrival">
+						</div>
+
+						<div class="form-group">
+							<label class="control-label requiredField" for="duration">
+							  Trip Duration :
+							<input type="time" name= "path_time">
+						</div>
+
+						<div class="form-group">
+							<div>
+							 <button class="btn btn-primary " name="submit" type="submit">
+							  Submit
+							 </button>
+							</div>
+						</div>
+				</form>
    </div>
   </div>
  </div>
-		</div>
+		</div> 
   
 		<!-- Modal footer -->
 		<div class="modal-footer">
