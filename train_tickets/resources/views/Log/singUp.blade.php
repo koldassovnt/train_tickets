@@ -1,7 +1,7 @@
 @extends('Log.layout.app')
 
 @section('title')
-Sign In
+Sign Up
 @endsection
 @include('include.header')
 @section('content')
@@ -14,7 +14,7 @@ Sign In
         <div class="signup-content">
             <div class="signup-form">
                 <h2 class="form-title">Sign up</h2>
-                <form method="POST" class="register-form" id="register-form">
+                <form method="POST" action="{{ route('register.store') }}" class="register-form" id="register-form">
                     <div class="form-group">
                         <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                         <input type="text" name="name" id="name" placeholder="Your Name"/>
@@ -41,7 +41,7 @@ Sign In
                 </form>
             </div>
             <div class="signup-image">
-                <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                <figure><img src="https://www.networkrail.co.uk/wp-content/uploads/2019/04/New-Measurement-Train-NMT.jpg" alt="sing up image"></figure>
                 <a href="#" class="signup-image-link">I am already member</a>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @extends('Log.layout.app')
 
 @section('title')
-Sign Up
+Sign In
 @endsection
 @include('include.header')
 @section('content')
@@ -13,13 +13,13 @@ Sign Up
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                        <figure><img src="https://i2-prod.leicestermercury.co.uk/incoming/article4462808.ece/ALTERNATES/s1200/3_East-Midlands-Rialway.jpg" alt="sing in image"></figure>
                         <a href="#" class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Sign in</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                        <form method="POST" action="#" class="register-form" id="login-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="your_name" id="your_name" placeholder="Your Name"/>
