@@ -5,7 +5,7 @@
 @section('title')
 Sign In
 @endsection
-
+@include('include.header')
 @section('content')
 
 <div class="main">
