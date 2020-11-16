@@ -139,6 +139,7 @@ class ComposerStaticInit5d30e2db405a10d60e527ed1aa2bc439
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
             'GrahamCampbell\\ResultType\\' => 26,
+            'GNAHotelSolutions\\Weather\\' => 26,
         ),
         'F' => 
         array (
@@ -159,6 +160,7 @@ class ComposerStaticInit5d30e2db405a10d60e527ed1aa2bc439
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Inflector\\' => 19,
             'Doctrine\\Common\\Lexer\\' => 22,
+            'Dnsimmons\\OpenWeather\\' => 22,
             'DeepCopy\\' => 9,
             'Database\\Seeders\\' => 17,
             'Database\\Factories\\' => 19,
@@ -423,6 +425,10 @@ class ComposerStaticInit5d30e2db405a10d60e527ed1aa2bc439
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
         ),
+        'GNAHotelSolutions\\Weather\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gnahotelsolutions/laravel-weather/src',
+        ),
         'Fruitcake\\Cors\\' => 
         array (
             0 => __DIR__ . '/..' . '/fruitcake/laravel-cors/src',
@@ -466,6 +472,10 @@ class ComposerStaticInit5d30e2db405a10d60e527ed1aa2bc439
         'Doctrine\\Common\\Lexer\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
+        ),
+        'Dnsimmons\\OpenWeather\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dnsimmons/openweather/src',
         ),
         'DeepCopy\\' => 
         array (
@@ -514,17 +524,14 @@ class ComposerStaticInit5d30e2db405a10d60e527ed1aa2bc439
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\CityController' => __DIR__ . '/../..' . '/app/Http/Controllers/CityController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\RailcarController' => __DIR__ . '/../..' . '/app/Http/Controllers/RailcarController.php',
-        'App\\Http\\Controllers\\RailcarSeatTypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/RailcarSeatTypeController.php',
-        'App\\Http\\Controllers\\SeatTypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/SeatTypeController.php',
-        'App\\Http\\Controllers\\SpotController' => __DIR__ . '/../..' . '/app/Http/Controllers/SpotController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
+        'App\\Http\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/RegisterController.php',
         'App\\Http\\Controllers\\TicketController' => __DIR__ . '/../..' . '/app/Http/Controllers/TicketController.php',
         'App\\Http\\Controllers\\TrainController' => __DIR__ . '/../..' . '/app/Http/Controllers/TrainController.php',
-        'App\\Http\\Controllers\\TrainSeatTypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/TrainSeatTypeController.php',
-        'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
-        'App\\Http\\Controllers\\UserTicketsController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserTicketsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -678,6 +685,8 @@ class ComposerStaticInit5d30e2db405a10d60e527ed1aa2bc439
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
         'DeepCopy\\TypeMatcher\\TypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
+        'Dnsimmons\\OpenWeather\\OpenWeather' => __DIR__ . '/..' . '/dnsimmons/openweather/src/OpenWeather.php',
+        'Dnsimmons\\OpenWeather\\OpenWeatherServiceProvider' => __DIR__ . '/..' . '/dnsimmons/openweather/src/OpenWeatherServiceProvider.php',
         'Doctrine\\Common\\Lexer\\AbstractLexer' => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php',
         'Doctrine\\Inflector\\CachedWordInflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector/CachedWordInflector.php',
         'Doctrine\\Inflector\\GenericLanguageInflectorFactory' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector/GenericLanguageInflectorFactory.php',
@@ -1416,6 +1425,9 @@ class ComposerStaticInit5d30e2db405a10d60e527ed1aa2bc439
         'Fideloper\\Proxy\\TrustedProxyServiceProvider' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustedProxyServiceProvider.php',
         'Fruitcake\\Cors\\CorsServiceProvider' => __DIR__ . '/..' . '/fruitcake/laravel-cors/src/CorsServiceProvider.php',
         'Fruitcake\\Cors\\HandleCors' => __DIR__ . '/..' . '/fruitcake/laravel-cors/src/HandleCors.php',
+        'GNAHotelSolutions\\Weather\\Weather' => __DIR__ . '/..' . '/gnahotelsolutions/laravel-weather/src/Weather.php',
+        'GNAHotelSolutions\\Weather\\WeatherFacade' => __DIR__ . '/..' . '/gnahotelsolutions/laravel-weather/src/WeatherFacade.php',
+        'GNAHotelSolutions\\Weather\\WeatherServiceProvider' => __DIR__ . '/..' . '/gnahotelsolutions/laravel-weather/src/WeatherServiceProvider.php',
         'GrahamCampbell\\ResultType\\Error' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Error.php',
         'GrahamCampbell\\ResultType\\Result' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Result.php',
         'GrahamCampbell\\ResultType\\Success' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Success.php',

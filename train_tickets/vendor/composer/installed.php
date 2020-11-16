@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '9370a5d0ac88fb49a2c3769dd436a816617b24e8',
+    'reference' => '66f1a60c1eb40212d33bd7f199a24a0e2c48a82a',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -51,6 +51,15 @@
       array (
       ),
       'reference' => '8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd',
+    ),
+    'dnsimmons/openweather' => 
+    array (
+      'pretty_version' => '1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4c555e6f9420affbeb781cf3331ee6826eeb1dba',
     ),
     'doctrine/inflector' => 
     array (
@@ -159,6 +168,15 @@
       array (
       ),
       'reference' => '01de0fe5f71c70d1930ee9a80385f9cc28e0f63a',
+    ),
+    'gnahotelsolutions/laravel-weather' => 
+    array (
+      'pretty_version' => 'v1.2.0',
+      'version' => '1.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c6c2071aba3d30b544437fdb8f28460c4e1bd118',
     ),
     'graham-campbell/result-type' => 
     array (
@@ -445,7 +463,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '9370a5d0ac88fb49a2c3769dd436a816617b24e8',
+      'reference' => '66f1a60c1eb40212d33bd7f199a24a0e2c48a82a',
     ),
     'laravel/tinker' => 
     array (

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b595e83e16c560d4f221a561b41d475",
+    "content-hash": "bd6516bc99421e43dbc67930a2407d35",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -154,6 +154,43 @@
                 "source": "https://github.com/dnoegel/php-xdg-base-dir/tree/v0.1.1"
             },
             "time": "2019-12-04T15:06:13+00:00"
+        },
+        {
+            "name": "dnsimmons/openweather",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dnsimmons/openweather.git",
+                "reference": "4c555e6f9420affbeb781cf3331ee6826eeb1dba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dnsimmons/openweather/zipball/4c555e6f9420affbeb781cf3331ee6826eeb1dba",
+                "reference": "4c555e6f9420affbeb781cf3331ee6826eeb1dba",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dnsimmons\\OpenWeather\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Simmons",
+                    "email": "hello@dsimmons.me"
+                }
+            ],
+            "description": "OpenWeather is a Laravel package simplifying working with the free Open Weather Map APIs.",
+            "support": {
+                "issues": "https://github.com/dnsimmons/openweather/issues",
+                "source": "https://github.com/dnsimmons/openweather/tree/master"
+            },
+            "time": "2020-07-14T01:16:41+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -584,6 +621,71 @@
                 }
             ],
             "time": "2020-10-22T13:57:20+00:00"
+        },
+        {
+            "name": "gnahotelsolutions/laravel-weather",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gnahotelsolutions/laravel-weather.git",
+                "reference": "c6c2071aba3d30b544437fdb8f28460c4e1bd118"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gnahotelsolutions/laravel-weather/zipball/c6c2071aba3d30b544437fdb8f28460c4e1bd118",
+                "reference": "c6c2071aba3d30b544437fdb8f28460c4e1bd118",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.4|^7.0",
+                "illuminate/support": "5.8.*|6.*|7.*|8.*",
+                "php": "^7.1|^7.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.8.*|4.*|5.*|6.*",
+                "phpunit/phpunit": "^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GNAHotelSolutions\\Weather\\WeatherServiceProvider"
+                    ],
+                    "aliases": {
+                        "Weather": "GNAHotelSolutions\\Weather\\WeatherFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GNAHotelSolutions\\Weather\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Llop",
+                    "email": "dllop@gnahs.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "🌤️ A wrapper around Open Weather Map to get the current weather on a location.",
+            "homepage": "https://github.com/gnahotelsolutions/weather",
+            "keywords": [
+                "OpenWeatherMap",
+                "api",
+                "gnahotelsolutions",
+                "laravel",
+                "weather"
+            ],
+            "support": {
+                "issues": "https://github.com/gnahotelsolutions/laravel-weather/issues",
+                "source": "https://github.com/gnahotelsolutions/laravel-weather/tree/v1.2.0"
+            },
+            "time": "2020-09-10T06:36:15+00:00"
         },
         {
             "name": "graham-campbell/result-type",

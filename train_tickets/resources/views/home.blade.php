@@ -485,6 +485,13 @@ Trainiata
             </div>
         </div>
     </section>
+
+
+
+    <div><?php print_r($weather);?></div>
+
+
+
 @endsection
 
 
