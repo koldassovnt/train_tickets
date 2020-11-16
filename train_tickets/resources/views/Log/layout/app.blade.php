@@ -12,6 +12,14 @@
     <!-- Main css -->
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/log.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/fontAwesome.css">
+    <link rel="stylesheet" href="/css/hero-slider.css">
+    <link rel="stylesheet" href="/css/owl-carousel.css">
+    <link rel="stylesheet" href="/css/datepicker.css">
+    <script src="https://kit.fontawesome.com/a708827e2d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 </head>
 <body>
 
