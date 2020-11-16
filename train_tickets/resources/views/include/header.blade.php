@@ -8,8 +8,8 @@
             <li class="nav-li"><a id="len1" class="hoverable" href="/">Home</a></li>
             <li class="nav-li"><a id="len2" class="hoverable" href="/about">About</a></li>
             <li class="nav-li"><a id="len3" class="hoverable" href="/contacts">Contact</a></li>
-            <li class="nav-li"><a id="len4" class="hoverable" href="#">Login</a></li>
-            <li class="nav-li"><a id="len5" class="hoverable" href="#">Registration</a></li>
+            <li class="nav-li"><a id="len4" class="hoverable" href="/login">Login</a></li>
+            <li class="nav-li"><a id="len5" class="hoverable" href="/register">Registration</a></li>
             </ul>
         </div>
         </nav>

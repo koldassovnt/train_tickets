@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\TrainController;
 use App\Http\Controllers\TicketController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +24,15 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']);
 
 Route::get('/contacts', [HomeController::class, 'contacts']);
+
+Route::resources([
+    'login' => LoginController::class,
+]);
+
+Route::resources([
+    'register' => RegisterController::class,
+]);
+
 
 Route::resources([
     'admin' => AdminController::class,

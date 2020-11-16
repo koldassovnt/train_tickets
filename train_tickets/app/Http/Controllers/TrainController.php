@@ -45,7 +45,6 @@ class TrainController extends Controller
 
         $train = new Train([
             'train_name' => $request->get('name'),
-
         ]);
 
         $train->save();

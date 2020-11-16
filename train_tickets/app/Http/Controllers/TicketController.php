@@ -50,10 +50,10 @@ class TicketController extends Controller
         ]);
 
         $ticket = new Ticket([
-            'from_city_id' => (int)$request->get('from_city_id'),
-            'to_city_id' => (int)$request->get('to_city_id'),
-            'price' => (int)$request->get('price'),
-            'train_id' => (int)$request->get('train_id'),
+            'from_city_id' => $request->get('from_city_id'),
+            'to_city_id' => $request->get('to_city_id'),
+            'price' => $request->get('price'),
+            'train_id' => $request->get('train_id'),
             'departure_time' => $request->get('departure_time'),
             'arrival_time' => $request->get('arrival_time'),
             'path_time' => $request->get('path_time'),

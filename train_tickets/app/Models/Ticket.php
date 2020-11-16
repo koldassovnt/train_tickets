@@ -11,13 +11,13 @@ class Ticket extends Model
 
     public $primaryKey = 'ticket_id';
     
-    protected $fillable = [
-        'from_city_id',
-        'to_city_id',
-        'price',
-        'train_id',
-        'departure_time',
-        'arrival_time',
-        'path_time'
-    ];
+    // protected $fillable = [
+    //     'from_city_id',
+    //     'to_city_id',
+    //     'price',
+    //     'train_id',
+    //     'departure_time',
+    //     'arrival_time',
+    //     'path_time'
+    // ];
 }
