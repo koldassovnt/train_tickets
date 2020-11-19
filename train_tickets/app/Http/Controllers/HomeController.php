@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         $weather = new OpenWeather();
-        $current = $weather->getCurrentWeatherByCityName('Almaty');
+        $current = $weather->getCurrentWeatherByCityName('Astana');
 
         return view('home')->with('weather', $current);
     }
