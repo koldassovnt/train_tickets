@@ -74,8 +74,7 @@ class HomeController extends Controller
 
     public function search(Request $request){
 
-       
-
+        
         $date = substr($request->departure_date , 4 , 6);
 
        // ScrapperAPI::getTickets($request->city_from_code , $request->city_to_code, $date );

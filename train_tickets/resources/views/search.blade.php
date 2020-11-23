@@ -53,63 +53,57 @@ Search Res
         </div>
         <div class="container">
             <div class="row">
-            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="movie-ticket">
-  <div class="container-fluid">
-    <!-- Item -->
-    <div class="ui-item">
-      <!-- Head -->
-      <div class="ui-head">
-        <!-- Background Image -->
-        <img src="https://via.placeholder.com/800x400/48D1CC/000000" alt="" class="img-responsive bg-img">
-        <!-- Transparent Background -->
-        <div class="ui-trans clearfix">
-          <!-- Image -->
-          <img src="https://via.placeholder.com/300x300/87CEFA/000000" alt="" class="img-responsive">
-          <!-- Details -->
-          <div class="ui-details clearfix">
-            <!-- Movie Name -->
-            <h2><a href="#">Final destination</a></h2>
-            <!-- Labels -->
-            <a href="#" class="label">2014</a>
-            <a href="#" class="label">PG - 13</a>
-            <a href="#" class="label">143 min</a>
-            <a href="#" class="label">Action</a>
-            <a href="#" class="label">Adventures</a>
-            <!-- Paragraph -->
-            <p>Nemo enim ipsam volup tatem quia volup tas sit asper natur aut odit aut fugit volup quia volup tas sit asper natur aut odit aut fugit volup tatem sequi nesc iunt.</p>
-            <!-- Heading -->
-            <h4><span>Director</span>:</h4>
-            <!-- Director Name -->
-            <h5><a href="#">Joss Whedon</a></h5>
-            <!-- Heading -->
-            <h4><span>Writers</span>:</h4>
-            <!-- Writers -->
-            <h5><a href="#"> Joss Whedon (screenplay), Zak Penn (story)</a></h5>
-            <!-- Heading -->
-            <h4><span>Stars</span>:</h4>
-            <!-- Stars -->
-            <h5><a href="#">Slorm Mckency. ,</a> <a href="#">Maring lawyent ,</a> <a href="#">Lowin cleanting</a></h5>
-          </div>
+            <div class="flex items-center justify-center min-h-screen">
+        <div class="max-w-md md:max-w-2xl px-2">
+            <div class="bg-white shadow-xl rounded-lg overflow-hidden md:flex">
+                <div class="bg-cover bg-bottom h-56 md:h-auto md:w-56" style="background-image: url(https://images.unsplash.com/photo-1517736996303-4eec4a66bb17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80)">
+                </div>
+                <div>
+                    <div class="p-4 md:p-5">
+                        <p class="font-bold text-xl md:text-2xl">Amsterdam Walking Tour</p>
+                        <p class="text-gray-700 md:text-lg">Explore popular tourist destinations as well as hidden local favourites.</p>
+                    </div>
+                    <div class="p-4 md:p-5 bg-gray-100">
+                        <div class="sm:flex sm:justify-between sm:items-center">
+                            <div>
+                                <div class="text-lg text-gray-700"><span class="text-gray-900 font-bold">17</span> per person*</div>
+                                <div class="flex items-center">
+                                    <div class="flex inline-flex -mx-px">
+                                        <svg class="w-4 h-4 mx-px fill-current text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                                            <path d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z" /></svg>
+                                        <svg class="w-4 h-4 mx-px fill-current text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                                            <path d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z" /></svg>
+                                        <svg class="w-4 h-4 mx-px fill-current text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                                            <path d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z" /></svg>
+                                        <svg class="w-4 h-4 mx-px fill-current text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                                            <path d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z" /></svg>
+                                        <svg class="w-4 h-4 mx-px fill-current text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                                            <path d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z" /></svg>
+                                    </div>
+                                    <div class="text-gray-600 ml-2 text-sm md:text-base mt-1">28 reviews</div>
+                                </div>
+                            </div>
+                            <button class="mt-3 sm:mt-0 py-2 px-5 md:py-3 md:px-6 bg-indigo-700 hover:bg-indigo-600 font-bold text-white md:text-lg rounded-lg shadow-md">Book now</button>
+                        </div>
+                        <div class="mt-3 text-gray-600 text-sm md:text-base">*Prices may vary depending on selected date.</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-        <!-- Review -->
-        <div class="ui-review">
-          <!-- Heading -->
-          <h3>Final destination</h3>
-          <!-- Paragraph -->
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-          <!-- Buttons -->
-          <a href="#" class="ui-btn bg-red"><i class="fa fa-ticket"></i> Buy Tickets</a>
-          <a href="#" class="ui-btn bg-green"><i class="fa fa-dot-circle-o"></i> Buy DVDs</a>
-        </div>
-      </div>  
     </div>
-</div> 
             </div>
         </div>
     </section>
+    <script>
 
+  var x = document.getElementById("departure");
+  
+  var currentVal = x.value;
+  
+    x.value = "GET OUT OF MY SWAMP";
+  
+
+</script>
 @endsection
 
 
