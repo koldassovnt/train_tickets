@@ -15,4 +15,8 @@ class City extends Model
         'city_name',
         'city_code',
     ];
+
+    // public function ticket() {
+    //     return $this->belongsTo('App\Models\Ticket');
+    // }
 }
