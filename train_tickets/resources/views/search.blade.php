@@ -19,8 +19,11 @@ Search Res
        </span>
                                 </label>
                                 <select class="select form-control"  name="city_from_id" >
-                                    <option th:each="brand : ${ brands }" th:text="${brand.name}  " th:value="${brand.id} " th:selected="${brand_id==brand.id}" >
-                                    </option>
+                                <option value="">Select a location...</option>
+                                                    @foreach ($cities as $c)
+                                                    <option value="<?php echo $c->city_code?>">
+                                                    {{$c->city_name}}
+                                                    @endforeach
 
                                 </select>
                             </div>
@@ -34,8 +37,11 @@ Search Res
        </span>
                                 </label>
                                 <select class="select form-control"  name="city_to_id" >
-                                    <option th:each="brand : ${ brands }" th:text="${brand.name}  " th:value="${brand.id} " th:selected="${brand_id==brand.id}" >
-                                    </option>
+                                <option value="">Select a location...</option>
+                                                    @foreach ($cities as $c)
+                                                    <option value="<?php echo $c->city_code?>">
+                                                    {{$c->city_name}}
+                                                    @endforeach
 
                                 </select>
                             </div>
@@ -46,7 +52,7 @@ Search Res
                     
 
                         <div class="input-field third-wrap">
-                            <button class="btn-search" type="submit" th:text="Search"></button>
+                            <button class="btn-search" type="submit" > Search </button>
                         </div>
                     </div>
                 </form>

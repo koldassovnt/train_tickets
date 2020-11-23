@@ -14,7 +14,7 @@ class ScrapperAPI extends Model
    static function getTickets($fcity , $scity , $date ){
 
         $ch = curl_init();
-        curl_setopt($ch , CURLOPT_URL , "https://rasp.yandex.kz/search/train/?fromId=c22177&fromName=%D0%9D%D1%83%D1%80-%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+%28%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0%29&toId=c163&toName=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&when=30");
+        curl_setopt($ch , CURLOPT_URL , "https://rasp.yandex.kz/search/train/?fromId=$fcity&fromName=%D0%9D%D1%83%D1%80-%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+%28%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0%29&toId=$scity&toName=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&when=$date");
         curl_setopt($ch , CURLOPT_RETURNTRANSFER , true);
         $tickets = array();
         $html = curl_exec($ch);
@@ -69,7 +69,7 @@ class ScrapperAPI extends Model
             if($text != "" || $text != null){
 
                 $train = DB::table('trains')
-                ->select(DB::raw('* '))
+                ->select('traind_id')
                 ->where('train_name', '=', utf8_decode($text))
                 ->get();
                 if($train == null){
@@ -83,7 +83,7 @@ class ScrapperAPI extends Model
                     $tickets[$i]->train_id = $new_train->train_id;
                 }
                 else{
-                    $tickets[$i]->train_id = $train->train_id;
+                    $tickets[$i]->train_id = $train;
                 }
 
                 
