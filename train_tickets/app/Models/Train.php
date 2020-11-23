@@ -14,4 +14,9 @@ class Train extends Model
     protected $fillable = [
         'train_name',
     ];
+
+    // public function tickets()
+    // {
+    //     return $this->hasMany('App\Models\Ticket');
+    // }
 }

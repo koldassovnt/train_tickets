@@ -15,6 +15,7 @@ Admin Panel
 		</div>
 			<div style="padding: 30px;">
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTask">+ ADD a Ticket</button>
+		
 
 
 
@@ -175,37 +176,139 @@ Admin Panel
 								</tr>
 							</thead>
 							<tbody>
+								@foreach ($tickets as $t)
 								<tr>
-									<td>1</td>
-									<td>Almaty</td>
-									<td>London</td>
-									<td>High Speed</td>
-									<td>85 000 KZT</td>
-									<td>
-										
-										
-										<button type="button" class="btn btn-primary"><i class="bg-success"></i>Edit</button>
-							<button type="button" class="btn btn-danger"><i class="bg-danger"></i>Delete</button>
-								
-								</td>
-							
-									
+									<td>{{$t->ticket_id}}</td>
+									<td>{{App\Models\City::find($t->from_city_id)->city_name}}</td>
+									<td>{{App\Models\City::find($t->to_city_id)->city_name}}</td>
+									<td>{{App\Models\Train::find($t->train_id)->train_name}}</td>
+									<td>{{$t->price}}</td>
+									<td style="display: flex;">
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTicket<?php echo $t->ticket_id?>"><i class="bg-success"></i>Edit</button>
+
+										<!-- The Modal -->
+									<div class="modal fade" id="editTicket<?php echo $t->ticket_id?>" >
+										<div class="modal-dialog modal-xl" >
+										<div class="modal-content "style="width: 1000px;" >
+	
+										<!-- Modal Header -->
+										<div class="modal-header">
+										<h4 class="modal-title">Editing Ticket </h4>
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										</div>
+	
+										<!-- Modal body -->
+										<div class="modal-body">
+										<div class="container-fluid">
+											<div class="row">
+												<div class="col-md-6 col-sm-6 col-xs-12">
+													<form method="POST" action="{{ route('admin-tickets.update', $t->ticket_id) }}">
+														@method('PATCH') 
+														@csrf
+														<div class="form-group ">
+															<label class="control-label requiredField" for="from_city">
+																From City
+																   <span class="asteriskField">
+																   *
+																   </span>
+															   </label>
+															   <select class="select form-control" id="from_city" name="from_city_id">
+																   @foreach ($cities as $c)
+																   <option value="{{$c->city_id}}">
+																	   {{$c->city_name}}
+																	   </option>
+																   @endforeach
+															   </select>
+															  </div>
+									   
+															  <div class="form-group ">
+															   <label class="control-label requiredField" for="to_city">
+																To City:
+																   <span class="asteriskField">
+																   *
+																   </span>
+															   </label>
+															   <select class="select form-control" id="to_city" name="to_city_id">
+																   @foreach ($cities as $c)
+																   <option value="{{$c->city_id}}">
+																	   {{$c->city_name}}
+																	   </option>
+																   @endforeach
+															   </select>
+															  </div>
+									   
+															  <div class="form-group ">
+															   <label class="control-label requiredField" for="price">
+																Price :
+																   <span class="asteriskField">
+																   *
+																   </span>
+															   </label>
+																<input class="form-control" id="price" name="price" type="number" value="{{$t->price}}"/>
+															  </div>
+									   
+															  <div class="form-group ">
+															   <label class="control-label requiredField" for="train">
+																Train :
+																   <span class="asteriskField">
+																   *
+																   </span>
+															   </label>
+															   <select class="select form-control" id="train" name="train_id">
+																   @foreach ($trains as $tr)
+																   <option value="{{$tr->train_id}}">
+																	   {{$tr->train_name}}
+																   </option>
+																   @endforeach
+															   </select>
+															  </div>
+									   
+															  <div class="form-group">
+																   <label class="control-label requiredField" for="departure">
+																   Departure Time :
+																   <input type="time" name= "departure_time" id="departure" value="{{$t->departure_time}}">
+															   </div>
+									   
+															   <div class="form-group">
+																   <label class="control-label requiredField" for="arrival">
+																	 Arrival Time :
+																   <input type="time" name= "arrival_time" id="arrival" value="{{$t->arrival_time}}">
+															   </div>
+									   
+															   <div class="form-group">
+																   <label class="control-label requiredField" for="duration">
+																	 Trip Duration :
+																   <input type="time" name= "path_time" value="{{$t->path_time}}">
+															   </div>
+															</div>
+															<div class="form-group">
+																<button class="btn btn-primary " name="submit" type="submit">
+																Update
+																</button>
+															</div>
+													</form>
+												</div>
+											</div>
+										</div>
+										</div>
+	
+										<!-- Modal footer -->
+										<div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+										</div>
+	
+										</div>
+										</div>
+										</div>
+
+										<form style="margin-left: 8px;" action="{{ route('admin-tickets.destroy', $t->ticket_id)}}" method="POST">
+											@method('DELETE')
+											@csrf
+											<button type="submit" class="btn btn-danger">Delete</button>
+										</form>								
+									</td>
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>Almaty</td>
-									<td>Taldykorgan</td>
-									<td>High Speed</td>
-									<td>15 000 KZT</td>
-									<td>
-										
-										
-										<button type="button" class="btn btn-primary"><i class="bg-success"></i>Edit</button>
-							<button type="button" class="btn btn-danger"><i class="bg-danger"></i>Delete</button>
-								
-								</td>
-								</tr>
-								
+								@endforeach
 							</tbody>
 						</table>
 					</div>
@@ -214,6 +317,7 @@ Admin Panel
 		
 		</div>
 	
+
 	</div>
 	<!-- end main content -->
 	<!-- import script -->
