@@ -18,7 +18,7 @@
                 <div class="col-md-12">
                     <p>Copyright &copy; Arctic Fox
                 
-                | Design: <a href="#"><em>sunnydepo & lucifer</em></a></p>
+                | Design: <a href="#"><em>sunnydarkko & lucifer</em></a></p>
                 </div>
             </div>
         </div>

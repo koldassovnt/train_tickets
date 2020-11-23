@@ -100,7 +100,7 @@ Trainiata
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Check Weather For 5 NEXT Days</h2>
+                        <h2>Current Weather in Kazakhstan</h2>
                     </div>
                 </div>
                 <div class="wrapper">
@@ -109,11 +109,11 @@ Trainiata
                             <div class="row">
                                 <div class="col-md-12">
                                     <ul class="tabs clearfix" data-tabgroup="second-tab-group">
-                                        <li><a href="#monday" class="active">Monday</a></li>
-                                        <li><a href="#tuesday">Tuesday</a></li>
-                                        <li><a href="#wednesday">Wednesday</a></li>
-                                        <li><a href="#thursday">Thursday</a></li>
-                                        <li><a href="#friday">Friday</a></li>
+                                        <li><a href="#monday" class="active">South</a></li>
+                                        <li><a href="#tuesday">North</a></li>
+                                        <li><a href="#wednesday">West</a></li>
+                                        <li><a href="#thursday">East</a></li>
+                                        <li><a href="#friday">Middle</a></li>
                                     </ul>    
                                 </div>
                                 <div class="col-md-12">
@@ -122,40 +122,40 @@ Trainiata
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>Myanmar</h6>
+                                                        <h6><?php echo $almaty['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-03.png" alt="">
+                                                            <img src="<?php echo $almaty['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>32&deg;C</span>
+                                                        <span><?php echo $almaty['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>32&deg;</span></li>
-                                                            <li>12AM <span>22&deg;</span></li>
+                                                            <li>MAX <span><?php echo $almaty['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $almaty['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>Thailand</h6>
+                                                        <h6><?php echo $shymkent['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-02.png" alt="">
+                                                            <img src="<?php echo $shymkent['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>28&deg;C</span>
+                                                        <span><?php echo $shymkent['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>28&deg;</span></li>
-                                                            <li>12AM <span>18&deg;</span></li>
+                                                            <li>MAX <span><?php echo $shymkent['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $shymkent['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>India</h6>
+                                                        <h6><?php echo $taraz['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-01.png" alt="">
+                                                            <img src="<?php echo $taraz['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>33&deg;C</span>
+                                                        <span><?php echo $taraz['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>33&deg;</span></li>
-                                                            <li>12AM <span>27&deg;</span></li>
+                                                            <li>MAX <span><?php echo $taraz['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $taraz['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -165,40 +165,40 @@ Trainiata
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>Myanmar</h6>
+                                                        <h6><?php echo $astana['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-02.png" alt="">
+                                                            <img src="<?php echo $astana['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>28&deg;C</span>
+                                                        <span><?php echo $astana['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>27&deg;</span></li>
-                                                            <li>12AM <span>17&deg;</span></li>
+                                                            <li>MAX <span><?php echo $astana['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $astana['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>Thailand</h6>
+                                                        <h6><?php echo $kokshetau['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-03.png" alt="">
+                                                            <img src="<?php echo $kokshetau['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>31&deg;C</span>
+                                                        <span><?php echo $kokshetau['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>28&deg;</span></li>
-                                                            <li>12AM <span>18&deg;</span></li>
+                                                            <li>MAX <span><?php echo $kokshetau['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $kokshetau['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>India</h6>
+                                                        <h6><?php echo $qostanay['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-01.png" alt="">
+                                                            <img src="<?php echo $qostanay['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>26&deg;C</span>
+                                                        <span><?php echo $qostanay['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>26&deg;</span></li>
-                                                            <li>12AM <span>20&deg;</span></li>
+                                                            <li>MAX <span><?php echo $qostanay['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $qostanay['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -208,40 +208,40 @@ Trainiata
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>Myanmar</h6>
+                                                        <h6><?php echo $oral['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-03.png" alt="">
+                                                            <img src="<?php echo $oral['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>31&deg;C</span>
+                                                        <span><?php echo $oral['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>28&deg;</span></li>
-                                                            <li>12AM <span>18&deg;</span></li>
+                                                            <li>MAX <span><?php echo $oral['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $oral['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>Thailand</h6>
+                                                        <h6><?php echo $aktau['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-01.png" alt="">
+                                                            <img src="<?php echo $aktau['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>34&deg;C</span>
+                                                        <span><?php echo $aktau['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>34&deg;</span></li>
-                                                            <li>12AM <span>29&deg;</span></li>
+                                                            <li>MAX <span><?php echo $aktau['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $aktau['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>India</h6>
+                                                        <h6><?php echo $aktobe['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-02.png" alt="">
+                                                            <img src="<?php echo $aktobe['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>28&deg;C</span>
+                                                        <span><?php echo $aktobe['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>27&deg;</span></li>
-                                                            <li>12AM <span>17&deg;</span></li>
+                                                            <li>MAX <span><?php echo $aktobe['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $aktobe['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -251,40 +251,40 @@ Trainiata
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>Myanmar</h6>
+                                                        <h6><?php echo $oskemen['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-01.png" alt="">
+                                                            <img src="<?php echo $oskemen['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>27&deg;C</span>
+                                                        <span><?php echo $oskemen['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>27&deg;</span></li>
-                                                            <li>12AM <span>18&deg;</span></li>
+                                                            <li>MAX <span><?php echo $oskemen['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $oskemen['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>Thailand</h6>
+                                                        <h6><?php echo $pavlodar['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-02.png" alt="">
+                                                            <img src="<?php echo $pavlodar['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>28&deg;C</span>
+                                                        <span><?php echo $pavlodar['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>27&deg;</span></li>
-                                                            <li>12AM <span>17&deg;</span></li>
+                                                            <li>MAX <span><?php echo $pavlodar['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $pavlodar['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>India</h6>
+                                                        <h6><?php echo $semey['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-03.png" alt="">
+                                                            <img src="<?php echo $semey['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>31&deg;C</span>
+                                                        <span><?php echo $semey['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>28&deg;</span></li>
-                                                            <li>12AM <span>18&deg;</span></li>
+                                                            <li>MAX <span><?php echo $semey['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $semey['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -294,40 +294,40 @@ Trainiata
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>Myanmar</h6>
+                                                        <h6><?php echo $zhezqazghan['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-03.png" alt="">
+                                                            <img src="<?php echo $zhezqazghan['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>33&deg;C</span>
+                                                        <span><?php echo $zhezqazghan['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>33&deg;</span></li>
-                                                            <li>12AM <span>27&deg;</span></li>
+                                                            <li>MAX <span><?php echo $zhezqazghan['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $zhezqazghan['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>Thailand</h6>
+                                                        <h6><?php echo $qaraghandy['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-02.png" alt="">
+                                                            <img src="<?php echo $qaraghandy['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>31&deg;C</span>
+                                                        <span><?php echo $qaraghandy['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>31&deg;</span></li>
-                                                            <li>12AM <span>23&deg;</span></li>
+                                                            <li>MAX <span><?php echo $qaraghandy['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $qaraghandy['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="weather-item">
-                                                        <h6>India</h6>
+                                                        <h6><?php echo $qyzilorda['location']['name']?></h6>
                                                         <div class="weather-icon">
-                                                            <img src="img/weather-icon-01.png" alt="">
+                                                            <img src="<?php echo $qyzilorda['condition']['icon']?>" alt="">
                                                         </div>
-                                                        <span>28&deg;C</span>
+                                                        <span><?php echo $qyzilorda['forecast']['temp']?>&deg;C</span>
                                                         <ul class="time-weather">
-                                                            <li>12PM <span>28&deg;</span></li>
-                                                            <li>12AM <span>22&deg;</span></li>
+                                                            <li>MAX <span><?php echo $qyzilorda['forecast']['temp_max']?>&deg;</span></li>
+                                                            <li>MIN <span><?php echo $qyzilorda['forecast']['temp_min']?>&deg;</span></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -485,13 +485,6 @@ Trainiata
             </div>
         </div>
     </section>
-
-
-
-    <div><?php print_r($weather);?></div>
-
-
-
 @endsection
 
 
