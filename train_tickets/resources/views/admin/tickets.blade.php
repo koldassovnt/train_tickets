@@ -290,7 +290,8 @@ Admin Panel
 												</div>
 											</div>
 										</div>
-										</div>
+								</div>
+								</div>
 	
 										<!-- Modal footer -->
 										<div class="modal-footer">
