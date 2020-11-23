@@ -24,8 +24,9 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']);
 
 Route::get('/contacts', [HomeController::class, 'contacts']);
-
+Route::get('/search', [HomeController::class, 'search']);
 Route::get('/logout', [LoginController::class, 'destroy']);
+
 
 Route::resources([
     'login' => LoginController::class,

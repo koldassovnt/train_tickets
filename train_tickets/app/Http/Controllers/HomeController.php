@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Dnsimmons\OpenWeather\OpenWeather;
+use App\Models\City;
+use utils\ScrapperAPI;
 
 class HomeController extends Controller
 {
@@ -35,7 +37,7 @@ class HomeController extends Controller
         $zhezqazghan = $weather->getCurrentWeatherByCityName('Zhezqazghan','metric');
         $qaraghandy = $weather->getCurrentWeatherByCityName('Qaraghandy','metric');
         $qyzilorda = $weather->getCurrentWeatherByCityName('Qyzylorda','metric');
-
+        $cities = City::all();
 
         $params = [
             'almaty' => $almaty,
@@ -52,8 +54,10 @@ class HomeController extends Controller
             'semey' => $semey,
             'zhezqazghan' => $zhezqazghan,
             'qaraghandy' => $qaraghandy,
-            'qyzilorda' => $qyzilorda
+            'qyzilorda' => $qyzilorda,
+            'cities' => $cities
             ];
+           
 
         return view('home')->with($params);
     }
@@ -66,5 +70,17 @@ class HomeController extends Controller
     public function contacts()
     {
         return view('contacts');
+    }
+
+    public function search(Request $request){
+
+       
+
+        $date = substr($request->departure_date , 4 , 6);
+
+       // ScrapperAPI::getTickets($request->city_from_code , $request->city_to_code, $date );
+           
+        return view('search');
+
     }
 }

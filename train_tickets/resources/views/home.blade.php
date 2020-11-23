@@ -15,54 +15,44 @@ Trainiata
                         <div id="tab1">
                             <div class="submit-form">
                                 <h4>Check availability for <em>direction</em>:</h4>
-                                <form id="form-submit" action="" method="get">
+                                <form id="form-submit" action="{{url('/search')}}" method="get">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="from">From:</label>
-                                                <select required name='from' onchange='this.form.()'>
+                                                <select required name='from' onchange='this.form.()' name = "city_from_code">
                                                     <option value="">Select a location...</option>
-                                                    <option value="Almaty">Almaty</option>
-                                                    <option value="Nur-Sultan">Nur-Sultan</option>
-                                                    <option value="Shymkent">Shymkent</option>
-                                                    <option value="Kyzylorda">Kyzylorda</option>
-                                                    <option value="Kokshetau">Kokshetau</option>
-                                                    <option value="Atyrau">Atyrau</option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Aktau">Aktau</option>
-                                                    <option value="Taldykurgan">Taldykurgan</option>
-                                                    <option value="Taraz">Taraz</option>
+                                                    @foreach ($cities as $c)
+                                                    <option value="<?php echo $c->city_code?>">
+                                                    {{$c->city_name}}
+                                                    </option>
+                                                    @endforeach
                                                 </select>
                                             </fieldset>
                                         </div>
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="to">To:</label>
-                                                <select required name='to' onchange='this.form.()'>
+                                                <select required name='to' onchange='this.form.()' name = "city_to_code">
                                                     <option value="">Select a location...</option>
-                                                    <option value="Almaty">Almaty</option>
-                                                    <option value="Nur-Sultan">Nur-Sultan</option>
-                                                    <option value="Shymkent">Shymkent</option>
-                                                    <option value="Kyzylorda">Kyzylorda</option>
-                                                    <option value="Kokshetau">Kokshetau</option>
-                                                    <option value="Atyrau">Atyrau</option>
-                                                    <option value="Oral">Oral</option>
-                                                    <option value="Aktau">Aktau</option>
-                                                    <option value="Taldykurgan">Taldykurgan</option>
-                                                    <option value="Taraz">Taraz</option>
+                                                    @foreach ($cities as $c)
+                                                    <option value="<?php echo $c->city_code?>">
+                                                    {{$c->city_name}}
+                                                    </option>
+                                                    @endforeach
                                                 </select>
                                             </fieldset>
                                         </div>
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="departure">Departure date:</label>
-                                                <input name="deparure" type="text" class="form-control date" id="deparure" placeholder="Select date..." required="" onchange='this.form.()'>
+                                                <input name="deparure" type="text" id = "departure" class="form-control date" id="deparure" placeholder="Select date..." required="" onchange='this.form.()' name = "departure_date">
                                             </fieldset>
                                         </div>
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="return">Return date:</label>
-                                                <input name="return" type="text" class="form-control date" id="return" placeholder="Select date..." required="" onchange='this.form.()'>
+                                                <input name="return" type="text" class="form-control date" id="return" placeholder="Select date..." required="" onchange='this.form.()' name = "arrival_date">
                                             </fieldset>
                                         </div>
                                         <div class="col-md-6">
@@ -485,6 +475,16 @@ Trainiata
             </div>
         </div>
     </section>
+    <script>
+
+  var x = document.getElementById("departure");
+  
+  var currentVal = x.value;
+  
+    x.value = "GET OUT OF MY SWAMP";
+  
+
+</script>
 @endsection
 
 

@@ -4,17 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Ticket;
+use App\Models\City;
 
 class ScrapperAPI extends Model
 {
     use HasFactory;
 
-    function getTickets($fcity , $scity , $date ){
+   static function getTickets($fcity , $scity , $date ){
 
         $ch = curl_init();
-        curl_setopt($ch , CURLOPT_URL , "https://rasp.yandex.kz/search/train/?fromId=c164&fromName=%D0%9D%D1%83%D1%80-%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+%28%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0%29&toId=c22177&toName=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&when=16+%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8F");
+        curl_setopt($ch , CURLOPT_URL , "https://rasp.yandex.kz/search/train/?fromId=$fcity&fromName=%D0%9D%D1%83%D1%80-%D0%A1%D1%83%D0%BB%D1%82%D0%B0%D0%BD+%28%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0%29&toId=$scity&toName=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B&when=$date");
         curl_setopt($ch , CURLOPT_RETURNTRANSFER , true);
-        
+        $tickets = array();
         $html = curl_exec($ch);
         
         $dom = new DOMDocument();
@@ -38,9 +40,11 @@ class ScrapperAPI extends Model
         $spans = $dom->getElementsByTagName('h3');
         
         $spans_array = array();
-        foreach ($spans as $span){
-            $text = $span->textContent;
+        for ($i = 0 ; $i < sizeof($spans) ; $i++){
+            $text = $spans[$i]->textContent;
             $spans_array = $text;
+            $ticket = new Ticket();
+            $ticket->get_code();
             echo  utf8_decode($text)  . '<br>';
         }
         
@@ -72,6 +76,8 @@ class ScrapperAPI extends Model
             $durations_array = $text;
             echo  utf8_decode($text)  . '<br>';
         }
+
+
 
 
     }
