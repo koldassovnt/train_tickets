@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Dnsimmons\OpenWeather\OpenWeather;
 use App\Models\City;
-use utils\ScrapperAPI;
+use App\Models\ScrapperAPI;
+use App\Models\Train;
+use App\Models\Ticket;
 
 class HomeController extends Controller
 {
@@ -76,10 +78,21 @@ class HomeController extends Controller
 
         
         $date = substr($request->departure_date , 4 , 6);
+        $code_from = $request->city_from_code;
+        $code_to = $request->city_to_code;
 
-       // ScrapperAPI::getTickets($request->city_from_code , $request->city_to_code, $date );
+       $tickets =  ScrapperAPI::getTickets($code_from , $code_to, $date );
+
+       $trains = Train::all();
+       $cities = City::all();
+    
+       $params = [
+        'trains' => $trains,
+        'cities' => $cities,
+        'tickets'=>$tickets,
+        ];
            
-        return view('search');
+        return view('search')->with($params);
 
     }
 }
