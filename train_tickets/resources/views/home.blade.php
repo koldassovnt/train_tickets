@@ -23,7 +23,7 @@ Trainiata
                                                 <select required name='from' onchange='this.form.()' name = "city_from_code">
                                                     <option value="">Select a location...</option>
                                                     @foreach ($cities as $c)
-                                                    <option value="<?php echo $c->city_code?>">
+                                                    <option value="<?php echo $c->city_id?>">
                                                     {{$c->city_name}}
                                                     </option>
                                                     @endforeach
@@ -36,7 +36,7 @@ Trainiata
                                                 <select required name='to' onchange='this.form.()' name = "city_to_code">
                                                     <option value="">Select a location...</option>
                                                     @foreach ($cities as $c)
-                                                    <option value="<?php echo $c->city_code?>">
+                                                    <option value="<?php echo $c->city_id?>">
                                                     {{$c->city_name}}
                                                     </option>
                                                     @endforeach
@@ -46,13 +46,13 @@ Trainiata
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="departure">Departure date:</label>
-                                                <input name="deparure" type="text" id = "departure" class="form-control date" id="deparure" placeholder="Select date..." required="" onchange='this.form.()' name = "departure_date">
+                                                <input  type="date" id = "departure"   placeholder="Select date..."  name = "departure_date">
                                             </fieldset>
                                         </div>
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="return">Return date:</label>
-                                                <input name="return" type="text" class="form-control date" id="return" placeholder="Select date..." required="" onchange='this.form.()' name = "arrival_date">
+                                                <input type="date"  id="return" placeholder="Select date..."   name = "arrival_date">
                                             </fieldset>
                                         </div>
                                         <div class="col-md-6">

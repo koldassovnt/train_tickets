@@ -79,17 +79,21 @@ class HomeController extends Controller
 
        
 
-        $date = substr($request->departure_date , 4 , 6);
+       // $date = substr($request->departure_date , 4 , 6);
         $code_from = $request->city_from_code;
         $code_to = $request->city_to_code;
 
-       $tickets =  ScrapperAPI::getTickets($code_from , $code_to, $date );
-       if($tickets == null || sizeof($tickets) == 0){
-        $orgDate = $request->departure_date;
-        $newDate = date("m/d/Y", strtotime($orgDate));
-           $tickets  = DB::table('tickets')->where('departure_time' ,$newDate)->get();
+    //    $tickets =  ScrapperAPI::getTickets($code_from , $code_to, $date );
+    //    if($tickets == null || sizeof($tickets) == 0){
+        // $orgDate = $request->departure_date;
+        // $newDate = date("Y-m-d", strtotime($orgDate));
+           $tickets  = DB::table('tickets')->where(
+               ['departure_time' => $request->departure_date],
+               ['from_city_id' =>  $code_from],
+               ['to_city_id' => $code_to]
+           )->get();
           
-       }
+      // }
 
        $trains = Train::all();
        $cities = City::all();
