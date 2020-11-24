@@ -68,11 +68,10 @@ Search Res
       <!-- Head -->
       <div class="ui-head">
         <!-- Background Image -->
-        <img src="https://via.placeholder.com/800x400/48D1CC/000000" alt="" class="img-responsive bg-img">
+        <img src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-light-steel-blue-solid-color-background.jpg" alt="" class="img-responsive bg-img">
         <!-- Transparent Background -->
         <div class="ui-trans clearfix">
-          <!-- Image -->
-          <img src="https://via.placeholder.com/300x300/87CEFA/000000" alt="" class="img-responsive">
+       
           <!-- Details -->
           <div class="ui-details clearfix">
             <!-- Movie Name -->
@@ -80,17 +79,16 @@ Search Res
             
             <h4><span>Train</span>:</h4>
             <!-- Director Name -->
-            <h5>{{App\Models\Train::find($t->train_id)->train_name}}</h5>
+            <h5 style="color:white">{{App\Models\Train::find($t->train_id)->train_name}}</h5>
             <!-- Heading -->
-            <h4><span>Price</span>:</h4>
+            <h4><span >Duration</span>:</h4>
             <!-- Writers -->
-            <h5>{{$t->price}}</h5>
+            <h5><span style="color:white">{{$t->path_time}}</span></h5>
             <!-- Heading -->
             <h4><span>Trip info </span>:</h4>
             <!-- Stars -->
-            <h5>{{$t->departure_time}} - {{$t->arrival_time}} </h5>
-          
-            <h5>{{$t->path_time}}</h5>
+            <h5><span style="color:white">{{$t->departure_time}} - {{$t->arrival_time}}</span> </h5>
+        
           </div>
     
         </div>
@@ -98,12 +96,12 @@ Search Res
         <!-- Review -->
         <div class="ui-review">
           <!-- Heading -->
-          <h3>Duration</h3>
+          <h3>Price</h3>
           <!-- Paragraph -->
-          <p>{{$t->path_time}}</p>
+          <p>{{$t->price}}</p>
           <!-- Buttons -->
-          <a href="#" class="ui-btn bg-red"><i class="fa fa-ticket"></i> Buy Tickets</a>
-          <a href="#" class="ui-btn bg-green"><i class="fa fa-dot-circle-o"></i> Buy DVDs</a>
+          <a href="#" class="ui-btn bg-red"><i class="fa fa-ticket"></i> Buy Ticket</a>
+    
         </div>
       </div>  
     </div>
