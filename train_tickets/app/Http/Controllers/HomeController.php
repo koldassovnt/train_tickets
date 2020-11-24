@@ -8,6 +8,7 @@ use Dnsimmons\OpenWeather\OpenWeather;
 use App\Models\City;
 use App\Models\ScrapperAPI;
 use App\Models\Train;
+use DB;
 use App\Models\Ticket;
 
 class HomeController extends Controller
@@ -76,12 +77,19 @@ class HomeController extends Controller
 
     public function search(Request $request){
 
-        
+       
+
         $date = substr($request->departure_date , 4 , 6);
         $code_from = $request->city_from_code;
         $code_to = $request->city_to_code;
 
        $tickets =  ScrapperAPI::getTickets($code_from , $code_to, $date );
+       if($tickets == null || sizeof($tickets) == 0){
+        $orgDate = $request->departure_date;
+        $newDate = date("m/d/Y", strtotime($orgDate));
+           $tickets  = DB::table('tickets')->where('departure_time' ,$newDate)->get();
+          
+       }
 
        $trains = Train::all();
        $cities = City::all();

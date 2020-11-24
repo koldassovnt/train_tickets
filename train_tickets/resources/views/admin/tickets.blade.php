@@ -109,13 +109,13 @@ Admin Panel
 					   <div class="form-group">
 							<label class="control-label requiredField" for="departure">
 							Departure Time :
-							<input type="time" name= "departure_time" id="departure">
+							<input type="date" name= "departure_time" id="departure">
 						</div>
 
 						<div class="form-group">
 							<label class="control-label requiredField" for="arrival">
 							  Arrival Time :
-							<input type="time" name= "arrival_time" id="arrival">
+							<input type="date" name= "arrival_time" id="arrival">
 						</div>
 
 						<div class="form-group">

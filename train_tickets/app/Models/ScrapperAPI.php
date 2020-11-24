@@ -62,56 +62,56 @@ class ScrapperAPI extends Model
             array_push($tickets , $ticket);
         }
         
-        $elementsByClass = getElementsByClassName($dom, "SegmentTransport__item SegmentTransport__item_deluxeTrain", 'span');
-        $elems_array = array();
-         for ($i = 0 ; $i < sizeof($spans) ; $i++){
-            $text = $elementsByClass[$i]->textContent;
-            if($text != "" || $text != null){
-
-                $train = DB::table('trains')
-                ->select('traind_id')
-                ->where('train_name', '=', utf8_decode($text))
-                ->get();
-                if($train == null){
-
-                    $new_train = new Train([
-                        'train_name' => utf8_decode($text)
-                    ]);
+        // $elementsByClass = getElementsByClassName($dom, "SegmentTransport__item SegmentTransport__item_deluxeTrain", 'span');
+        // $elems_array = array();
+        //  for ($i = 0 ; $i < sizeof($spans) ; $i++){
             
-                    $new_train->save();
+        //     if($elementsByClass[$i]->textContent != "" || $elementsByClass[$i]->textContent != null){
+        //         $text = $elementsByClass[$i]->textContent;
+        //         $train = DB::table('trains')
+        //         ->select('train_id')
+        //         ->where('train_name', '=', utf8_decode($text))
+        //         ->get();
+        //         if($train == null){
 
-                    $tickets[$i]->train_id = $new_train->train_id;
-                }
-                else{
-                    $tickets[$i]->train_id = $train;
-                }
+        //             $new_train = new Train([
+        //                 'train_name' => utf8_decode($text)
+        //             ]);
+            
+        //             $new_train->save();
+
+        //             $tickets[$i]->train_id = $new_train->train_id;
+        //         }
+        //         else{
+        //             $tickets[$i]->train_id = $train;
+        //         }
 
                 
-            }
-            else{
+        //     }
+        //     else{
 
-                $ticket[$i]->train_id = 1;
+        //         $ticket[$i]->train_id = 1;
 
-            }
+        //     }
             
 
             
-        }
+        // }
      
         $times = getElementsByClassName($dom, "SearchSegment__time", 'span');
         $times_array = array();
         for ($i = 0 ; $i < sizeof($times) ; $i+=2){
             $time1 =  $times[$i]->textContent;
             $time2 = $times[$i+1]->textContent;
-            $tickets[$i]->departure_time = utf8_decode($time1);
-            $tickets[$i]->arrival_time = utf8_decode($time2);
+            $tickets[$i]->departure_time = $time1;
+            $tickets[$i]->arrival_time = $time2;
            
         }
         $durations = getElementsByClassName($dom, "SearchSegment__duration", 'div');
         $durations_array = array();
-        for ($i = 0 ; $i < sizeof($durations) ; $i+=2){
+        for ($i = 0 ; $i < sizeof($durations) ; $i++){
             $text = $durations[$i]->textContent;
-           $tickets[$i]->path_time = utf8_decode($text);
+           $tickets[$i]->path_time = $text;
            
         }
 
