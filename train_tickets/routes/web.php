@@ -8,6 +8,8 @@ use App\Http\Controllers\TrainController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\Auth\GoogleLoginController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,6 +50,12 @@ Route::resources([
 Route::resources([
     'admin-trains' => TrainController::class,
 ]);
+
+
+Route::get('auth/social', [GoogleLoginController::class ,'show' ])->name('social.login');
+Route::get('oauth/{driver}', [GoogleLoginController::class ,'redirectToProvider' ])->name('social.oauth');
+Route::get('oauth/{driver}/callback', [GoogleLoginController::class ,'handleProviderCallback' ])->name('social.callback');
+
 
 Route::resources([
     'admin-tickets' => TicketController::class,

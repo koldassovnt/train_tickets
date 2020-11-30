@@ -30,4 +30,15 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'github' => [
+        'client_id' => env('GH_ID'),
+        'client_secret' => env('GH_SECRET'),
+        'redirect' => env('APP_URL') . '/oauth/github/callback',
+    ],
+    'google' => [
+        'client_id'     => env('GL_ID'),
+        'client_secret' => env('GL_SECRET'),
+        'redirect'      => env('APP_URL') . '/oauth/google/callback',
+    ]
+
 ];

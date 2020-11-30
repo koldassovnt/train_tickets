@@ -22,9 +22,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'avatar', 'provider_id', 'provider',
         'is_admin',
+        'access_token'
     ];
-
+    protected $guarded = ['*'];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -43,6 +45,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+
+
+
+
+   
+   //You can also use below statement 
+   
+  
 
     public function setPasswordAttribute($password)
     {
