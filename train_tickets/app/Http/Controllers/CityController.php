@@ -16,6 +16,9 @@ class CityController extends Controller
      */
     public function index()
     {
+        if (auth()->user()->is_admin != true) {
+            return View("403");
+        }
         $cities = City::all();
         return view('admin.cities')->with('cities', $cities);
     }

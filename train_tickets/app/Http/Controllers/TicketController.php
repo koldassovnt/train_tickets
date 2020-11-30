@@ -19,6 +19,9 @@ class TicketController extends Controller
     public function index()
     {
 
+        if (auth()->user()->is_admin != true) {
+            return View("403");
+        }
         $trains = Train::all();
         $cities = City::all();
         $tickets = Ticket::all();

@@ -13,6 +13,10 @@ class AdminController extends Controller
      */
     public function index()
     {
+        if (auth()->user()->is_admin != true) {
+            return View("403");
+        }
+        
         return view("admin.index");
     }
 
