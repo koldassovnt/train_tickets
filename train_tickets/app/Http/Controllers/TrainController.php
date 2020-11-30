@@ -17,6 +17,9 @@ class TrainController extends Controller
      */
     public function index()
     {
+        if (auth()->user()->is_admin != true) {
+            return View("403");
+        }
         $trains = Train::all();
         return view('admin.trains')->with('trains', $trains);
     }
