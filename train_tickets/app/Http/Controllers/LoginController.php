@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Input;
 
 class LoginController extends Controller
 {
@@ -35,12 +36,13 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        if (auth()->attempt(request(['email', 'password'])) == false) {
+        $remember = ($request->has('remember-me')) ? true : false;
+
+        if (auth()->attempt(request(['email', 'password']), $remember) == false) {
             return back()->withErrors([
                 'message' => 'The email or password is incorrect, please try again'
             ]);
         }
-        
         return redirect()->to('/');
     }
 

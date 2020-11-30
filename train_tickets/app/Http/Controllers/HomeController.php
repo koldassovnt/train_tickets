@@ -107,4 +107,5 @@ class HomeController extends Controller
         return view('search')->with($params);
 
     }
+  
 }
