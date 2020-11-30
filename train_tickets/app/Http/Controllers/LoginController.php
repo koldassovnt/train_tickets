@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
+// use Symfony\Component\HttpFoundation\Cookie;
+use Cookie;
+
 
 class LoginController extends Controller
 {
@@ -38,12 +42,21 @@ class LoginController extends Controller
     {
         $remember = ($request->has('remember-me')) ? true : false;
 
-        if (auth()->attempt(request(['email', 'password']), $remember) == false) {
-            return back()->withErrors([
-                'message' => 'The email or password is incorrect, please try again'
-            ]);
+        $auth = Auth::attempt(
+            [
+                'email'  => $request->email,
+                'password'  => $request->password    
+            ], $remember
+        );
+
+        if ($auth) {
+            return redirect()->to('/');
+        } else {
+            // validation not successful, send back to form 
+            // return Redirect::to('/login')
+            //     ->with Input(Input::except('password'))
+            //     ->with('flash_notice', 'Your username/password combination was incorrect.');
         }
-        return redirect()->to('/');
     }
 
     /**
@@ -89,6 +102,8 @@ class LoginController extends Controller
     public function destroy()
     {
         auth()->logout();
+        $rememberMeCookie = Auth::getRecallerName();
+        $cookie = Cookie::forget($rememberMeCookie);
         
         return redirect()->to('/');
     }
