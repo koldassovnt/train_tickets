@@ -37,8 +37,8 @@ class Ticket extends Model
     //     return $this->hasOne('App\Models\City');
     // }
 
-    public function users()
-    {
-        return $this->belongsToMany('App\Models\User');
-    }
+    // public function users()
+    // {
+    //     return $this->belongsToMany('App\Models\User');
+    // }
 }
