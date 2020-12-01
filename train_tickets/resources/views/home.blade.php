@@ -453,8 +453,8 @@ Trainiata
                             </div>
                         </div>
                         <div class="item col-md-12">
-                            <div width="270" height="230" class="visited-item">
-                                <img src="img/shymkent-img.jpg" alt="">
+                            <div class="visited-item">
+                                <img width="270" height="230" src="img/shymkent-img.jpg" alt="">
                                 <div class="text-content">
                                     <h4>Sed faucibus odio</h4>
                                     <span>Shymkent</span>

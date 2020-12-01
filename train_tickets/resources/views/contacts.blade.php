@@ -19,7 +19,7 @@ Trainiata
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
                 <div class="item active">
-                  <img src="../img/contact-01.jpg" alt="Los Angeles" style="width:100%;">
+                  <img width="720" height="480" src="../img/contact-01.jpg" alt="Los Angeles" style="width:100%;">
                   <div class="carousel-caption">
                     <h3>Lorem, ipsum dolor.</h3>
                     <p style="color: crimson;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat.</p>
@@ -27,7 +27,7 @@ Trainiata
                 </div>
           
                 <div class="item">
-                  <img src="../img/contact-02.jpg" alt="Chicago" style="width:100%;">
+                  <img width="720" height="480" src="../img/contact-02.jpg" alt="Chicago" style="width:100%;">
                   <div class="carousel-caption">
                     <h3>Lorem, ipsum.</h3>
                     <p style="color: crimson;">Lorem ipsum dolor sit amet consectetur adipisicing!</p>
@@ -35,7 +35,7 @@ Trainiata
                 </div>
               
                 <div class="item">
-                  <img src="../img/train-board-bg.jpg" alt="New york" style="width:100%;">
+                  <img width="720" height="480" src="../img/train-board-bg.jpg" alt="New york" style="width:100%;">
                   <div class="carousel-caption">
                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
                     <p style="color: crimson;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur beatae possimus praesentium!</p>
@@ -63,7 +63,7 @@ Trainiata
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Leave us a message</h2>
+                        <h2 style="color: white">Leave us a message</h2>
                     </div>
                 </div>
                 <div class="col-md-6 col-md-offset-3">

@@ -45,7 +45,7 @@ Sign In
                         <div class="social-login">
                             <span class="social-label">Or login with</span>
                             <ul class="socials">
-                              
+
                                 <li><a href="{{ route('social.oauth', 'github') }}"><i class="display-flex-center zmdi zmdi-github"></i></a></li>
                                 <li><a href="{{ route('social.oauth', 'google') }}"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
                             </ul>
