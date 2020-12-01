@@ -55,8 +55,12 @@ Route::resources([
 Route::get('auth/social', [GoogleLoginController::class ,'show' ])->name('social.login');
 Route::get('oauth/{driver}', [GoogleLoginController::class ,'redirectToProvider' ])->name('social.oauth');
 Route::get('oauth/{driver}/callback', [GoogleLoginController::class ,'handleProviderCallback' ])->name('social.callback');
-
+Route::get('ticket/{id}', function($id)
+{
+    return 'Ticket'.$id;
+});
 
 Route::resources([
     'admin-tickets' => TicketController::class,
 ]);
+

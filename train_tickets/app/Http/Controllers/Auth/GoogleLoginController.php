@@ -21,7 +21,7 @@ class GoogleLoginController extends Controller
 
     public function show()
     {
-        return view('auth.login');
+        return view('Log.singIn');
     }
 
     public function redirectToProvider($driver)
