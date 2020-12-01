@@ -100,7 +100,7 @@ Search Res
           <!-- Paragraph -->
           <p>{{$t->price}}</p>
           <!-- Buttons -->
-          <a href="#" class="ui-btn bg-red"><i class="fa fa-ticket"></i> Buy Ticket</a>
+          <a href="https://rasp.yandex.kz/search/train/?fromId=<?php echo App\Models\City::find($t->from_city_id)->city_code?>&fromName=<?php echo App\Models\City::find($t->from_city_id)->city_name?>&toId=<?php echo App\Models\City::find($t->to_city_id)->city_code?>&toName=<?php echo App\Models\City::find($t->to_city_id)->city_name?>+&when=<?php echo substr($t->departure_time , -2)?>" class="ui-btn bg-red"><i class="fa fa-ticket"></i> 
     
         </div>
       </div>  
