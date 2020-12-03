@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'e0a87c2b561c33e459e3e7bbc5f60fb5da9c3be6',
+    'reference' => '4e8112270986dd0897d60226ebf217b14a9f841d',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -476,7 +476,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'e0a87c2b561c33e459e3e7bbc5f60fb5da9c3be6',
+      'reference' => '4e8112270986dd0897d60226ebf217b14a9f841d',
     ),
     'laravel/socialite' => 
     array (
@@ -1009,6 +1009,15 @@ private static $installed = array (
       ),
       'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
     ),
+    'spipu/html2pdf' => 
+    array (
+      'pretty_version' => 'v5.2.2',
+      'version' => '5.2.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e6d8ca22347b6691bb8c2652212b1be2c89b3eff',
+    ),
     'swiftmailer/swiftmailer' => 
     array (
       'pretty_version' => 'v6.2.3',
@@ -1274,6 +1283,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '4e13f3fcefb1fcaaa5efb5403581406f4e840b9a',
+    ),
+    'tecnickcom/tcpdf' => 
+    array (
+      'pretty_version' => '6.3.5',
+      'version' => '6.3.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '19a535eaa7fb1c1cac499109deeb1a7a201b4549',
     ),
     'theseer/tokenizer' => 
     array (

@@ -9,6 +9,7 @@ use App\Http\Controllers\TicketController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Auth\GoogleLoginController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,4 +64,6 @@ Route::get('ticket/{id}', function($id)
 Route::resources([
     'admin-tickets' => TicketController::class,
 ]);
+
+Route::get('sendattachmentemail', [MailController::class, 'attachment_email']);
 

@@ -10,6 +10,7 @@ use App\Models\ScrapperAPI;
 use App\Models\Train;
 use DB;
 use App\Models\Ticket;
+use Spipu\Html2Pdf\Html2Pdf;
 
 class HomeController extends Controller
 {
@@ -103,9 +104,6 @@ class HomeController extends Controller
         ];
            
         return view('search')->with($params);
-
     }
-
-
   
 }
