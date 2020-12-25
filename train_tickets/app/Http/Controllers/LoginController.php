@@ -52,6 +52,7 @@ class LoginController extends Controller
         if ($auth) {
             return redirect()->to('/');
         } else {
+            return redirect()->to('login');
             // validation not successful, send back to form 
             // return Redirect::to('/login')
             //     ->with Input(Input::except('password'))

@@ -20,7 +20,7 @@ Trainiata
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="from">From:</label>
-                                                <select required name='from' onchange='this.form.()' name = "city_from_code">
+                                                <select name='fromC' onchange='this.form.()' required >
                                                     <option value="">Select a location...</option>
                                                     @foreach ($cities as $c)
                                                     <option value="<?php echo $c->city_id?>">
@@ -33,7 +33,7 @@ Trainiata
                                         <div class="col-md-6">
                                             <fieldset>
                                                 <label for="to">To:</label>
-                                                <select required name='to' onchange='this.form.()' name = "city_to_code">
+                                                <select name='toC' onchange='this.form.()' required >
                                                     <option value="">Select a location...</option>
                                                     @foreach ($cities as $c)
                                                     <option value="<?php echo $c->city_id?>">

@@ -10,7 +10,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Auth\GoogleLoginController;
 use App\Http\Controllers\MailController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,12 +24,13 @@ use App\Http\Controllers\MailController;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about', [HomeController::class, 'about']);
-
+Route::get('/mailText', [HomeController::class, 'mailText']);
 Route::get('/contacts', [HomeController::class, 'contacts']);
 Route::get('/search', [HomeController::class, 'search']);
+Route::get('/payment', [HomeController::class, 'payment']);
 Route::get('/logout', [LoginController::class, 'destroy']);
 
-
+Route::get('/buy', [HomeController::class, 'buy']);
 Route::resources([
     'login' => LoginController::class,
 ]);
@@ -64,6 +64,15 @@ Route::get('ticket/{id}', function($id)
 Route::resources([
     'admin-tickets' => TicketController::class,
 ]);
-
-Route::get('sendattachmentemail', [MailController::class, 'attachment_email']);
-
+Route::get('send-mail', function () {
+   
+    $details = [
+        'title' => 'Mail from ItSolutionStuff.com',
+        'body' => 'This is for testing email using smtp'
+    ];
+   
+    \Mail::to('your_receiver_email@gmail.com')->send(new \App\Mail\MyTestMail($details));
+   
+    dd("Email is Sent.");
+});
+// Route::get('sendattachmentemail', [MailController::class, 'attachment_email']);

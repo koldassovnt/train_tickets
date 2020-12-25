@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-main',
-    'version' => 'dev-main',
+    'pretty_version' => '1.0.0+no-version-set',
+    'version' => '1.0.0.0',
     'aliases' => 
     array (
     ),
-    'reference' => '4e8112270986dd0897d60226ebf217b14a9f841d',
+    'reference' => NULL,
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -458,12 +458,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
+      'pretty_version' => '1.0.0+no-version-set',
+      'version' => '1.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4e8112270986dd0897d60226ebf217b14a9f841d',
+      'reference' => NULL,
     ),
     'laravel/socialite' => 
     array (
@@ -527,6 +527,15 @@
       array (
       ),
       'reference' => '159c3d2bf27568f9af87d6c3f4bb616a251eb12b',
+    ),
+    'milon/barcode' => 
+    array (
+      'pretty_version' => '8.0.0',
+      'version' => '8.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3402fe842772deaf021c25854dad8d74e80a0163',
     ),
     'mockery/mockery' => 
     array (

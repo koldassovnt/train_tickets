@@ -13,9 +13,14 @@ class AdminController extends Controller
      */
     public function index()
     {
+        if(auth()->user() == null){
+            return View("403");
+        }
         if (auth()->user()->is_admin != true) {
             return View("403");
         }
+        
+    
         
         return view("admin.index");
     }
@@ -28,6 +33,7 @@ class AdminController extends Controller
     public function create()
     {
         //
+        
     }
 
     /**

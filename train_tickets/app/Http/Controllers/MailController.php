@@ -17,6 +17,6 @@ class MailController extends Controller
            $message->attach('C:\laravel-master\laravel\public\uploads\test.txt');
            $message->from('xyz@gmail.com','Virat Gandhi');
         });
-        echo "Email Sent with attachment. Check your inbox.";
+      //   echo "Email Sent with attachment. Check your inbox.";
      }
 }
